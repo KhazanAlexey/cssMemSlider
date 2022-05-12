@@ -20,10 +20,124 @@ html {
 }
 
 .slider__wrapper {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+
+    /*flex-direction: column;*/
+    margin: 10vh auto;
 }
-.img__wrapper{
+
+.img__wrapper {
     overflow: hidden;
+    border: 1px solid red;
+    grid-column: 1/3;
+}
+
+.img__container {
+    display: inline-flex;
+    height: 60vh;
+    width: 480vw;
+
+}
+.checkbox_radio{
+    /*display: none;*/
+}
+.navigation{
+    display: inline-flex;
+
+}
+.button{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1rem;
+    height: 1rem;
+
+}
+
+.button__item{
+    border: 0.2rem solid #103fbd;
+    background-color: #103fbd;
+    border-radius: 50%;
+    width: 0.7rem;
+    height: 0.7rem;
+}
+.img__container_slide {
+    transition: 1s cubic-bezier(.17, .67, .99, .22);
+    width: 20%;
+}
+
+.mem_1 {
+    background: url(./assets/photo_2022-05-13_01-34-03.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mem_2 {
+    background: url(./assets/photo_2022-05-13_01-35-10.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mem_3 {
+    background: url(./assets/photo_2022-05-13_01-37-41.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mem_4 {
+    background: url(./assets/photo_2022-05-13_01-37-42.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mem_5 {
+    background: url(./assets/photo_2022-05-13_01-37-43.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mem_6 {
+    background: url(./assets/photo_2022-05-13_01-37-44.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#slide_1:checked ~ .img__wrapper .img__container {
+    transform: translate(0%);
+    transition: 2s;
+}
+
+#slide_2:checked ~ .img__wrapper .img__container {
+    transition: 2s;
+    transform: translateX(-80vw);
+}
+
+#slide_3:checked ~ .img__wrapper .img__container {
+    transition: 2s;
+    transform: translateX(-160vw);
+}
+
+#slide_4:checked ~ .img__wrapper .img__container {
+    transition: 2s;
+    transform: translateX(-240vw);
+}
+
+#slide_5:checked ~ .img__wrapper .img__container {
+    transition: 2s;
+    transform: translateX(-320vw);
+}
+
+#slide_6:checked ~ .img__wrapper .img__container {
+    transition: 2s;
+    transform: translateX(-400vw);
 }
