@@ -41,30 +41,32 @@ html {
     width: 480vw;
 
 }
-.checkbox_radio{
+
+.checkbox_radio {
     /*display: none;*/
 }
-.navigation{
-    display: inline-flex;
 
+.navigation {
+    display: flex;
+    justify-self: end;
 }
-.button{
 
+.button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1rem;
-    height: 1rem;
-
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
-.button__item{
-    border: 0.2rem solid #103fbd;
+.button__item {
+    border: 0.3rem solid #103fbd;
     background-color: #103fbd;
     border-radius: 50%;
-    width: 0.7rem;
-    height: 0.7rem;
+    width: 1rem;
+    height: 1rem;
 }
+
 .img__container_slide {
     transition: 1s cubic-bezier(.17, .67, .99, .22);
     width: 20%;
@@ -112,32 +114,80 @@ html {
     background-repeat: no-repeat;
 }
 
+#slide_1:checked ~ .mem__description_wrapper .mem__description_container,
 #slide_1:checked ~ .img__wrapper .img__container {
     transform: translate(0%);
     transition: 2s;
 }
 
+#slide_2:checked ~ .mem__description_wrapper .mem__description_container,
 #slide_2:checked ~ .img__wrapper .img__container {
     transition: 2s;
     transform: translateX(-80vw);
 }
 
+#slide_3:checked ~ .mem__description_wrapper .mem__description_container,
 #slide_3:checked ~ .img__wrapper .img__container {
     transition: 2s;
     transform: translateX(-160vw);
 }
 
+#slide_4:checked ~ .mem__description_wrapper .mem__description_container,
 #slide_4:checked ~ .img__wrapper .img__container {
     transition: 2s;
     transform: translateX(-240vw);
 }
 
+#slide_5:checked ~ .mem__description_wrapper .mem__description_container,
 #slide_5:checked ~ .img__wrapper .img__container {
     transition: 2s;
     transform: translateX(-320vw);
 }
 
+#slide_6:checked ~ .mem__description_wrapper .mem__description_container,
 #slide_6:checked ~ .img__wrapper .img__container {
     transition: 2s;
     transform: translateX(-400vw);
+}
+
+#slide_1:checked ~ .navigation label[for="slide_1"] .button__item {
+    background: #ffff;
+}
+
+#slide_2:checked ~ .navigation label[for="slide_2"] .button__item {
+    background: #ffff;
+}
+
+#slide_3:checked ~ .navigation label[for="slide_3"] .button__item {
+    background: #ffff;
+}
+
+#slide_4:checked ~ .navigation label[for="slide_4"] .button__item {
+    background: #ffff;
+}
+
+#slide_5:checked ~ .navigation label[for="slide_5"] .button__item {
+    background: #ffff;
+}
+
+#slide_6:checked ~ .navigation label[for="slide_6"] .button__item {
+    background: #ffff;
+}
+
+.mem__description_wrapper {
+
+
+    grid-column: 1/2;
+    overflow: hidden;
+}
+
+.mem__description_item {
+    white-space: nowrap;
+    width: 80vw;
+}
+
+.mem__description_container {
+    width: 480vw;
+    flex-wrap: nowrap;
+    display: inline-flex;
 }
