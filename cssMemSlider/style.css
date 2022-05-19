@@ -71,7 +71,7 @@ html {
     opacity: 50%;
 }
 
-label.button:active:active {
+label.button:active {
     transform: scale(1.5);
 }
 
