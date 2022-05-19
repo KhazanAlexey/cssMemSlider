@@ -71,6 +71,10 @@ html {
     opacity: 50%;
 }
 
+span.button__item:active {
+    transform: scale(1.5);
+}
+
 .img__container_slide {
     transition: 1s cubic-bezier(.17, .67, .99, .22);
     width: 20%;
